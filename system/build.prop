@@ -1,6 +1,6 @@
 ro.build.id=LRX22C
 ro.build.display.id=LRX22C Delirium D1 v2
-ro.build.version.incremental=1602158
+ro.build.version.incremental=2
 ro.build.version.sdk=21
 ro.build.version.codename=REL
 ro.build.version.all_codenames=REL
@@ -112,4 +112,3 @@ dalvik.vm.isa.arm.features=div
 dalvik.vm.dexopt-flags=m=y
 net.bt.name=Android
 dalvik.vm.stack-trace-file=/data/anr/traces.txt
-
