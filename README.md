@@ -6,7 +6,7 @@ Delirium-D1
   - Scarica la Kitchen per il tuo SO [Kitchen Linux] <---> [Kitchen Windows]
   - Clona il repository o scaricalo in formato ZIP
   - Inserire i files appena scaricati nella cartella WORKING della Kitchen
-  - Rimuovere i files README e License
+  - Rimuovere il file README
   - Avviare la Kitchen (Windows) o muoversi con il terminale nell'eseguibile della Kitchen (Linux)
   - Fare partire il build della rom
   - Selezionare tutte le ottimizzazioni durante la generazione (Linux)
@@ -24,8 +24,8 @@ Se hai già installato la rom e vuoi aggiornarla, installa lo zip aggiornato da 
 
 ##Perchè non si opera sui sorgenti?
 Lavorare con i sorgenti su GitHub è preferibile ma richiede molte risorse, spazio e tempo.
-La rom è stata compilata originariamente dai sorgenti Google, compilata utilizzando Linaro toolchain.
-Se dovessero essere necessarie operazioni sui sorgenti, la rom verrà automaticamente aggiornata.
+La rom è stata compilata originariamente dai sorgenti Google utilizzando Linaro toolchain.
+Se dovessero essere necessarie operazioni sui sorgenti, la rom generata verrà automaticamente caricata.
 
 [Kitchen Linux]:https://github.com/dsixda/Android-Kitchen/releases/tag/0.224/
 [Kitchen Windows]:http://goo.gl/qI1zRM
