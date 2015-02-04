@@ -6,6 +6,7 @@ ui_print("**********************************");
 run_program("/sbin/sh", "-c", "grep -q '/system' /etc/mtab || mount /system");
 run_program("/sbin/sh", "-c", "chattr -R -i /system/*");
 run_program("/sbin/sh", "-c", "rm -rf /system/*");
+ui_print("Estrazione sistema...");
 package_extract_dir("system", "/system");
 symlink("Roboto-Bold.ttf", "/system/fonts/DroidSans-Bold.ttf");
 symlink("Roboto-Regular.ttf", "/system/fonts/DroidSans.ttf");
@@ -38,7 +39,7 @@ symlink("toolbox", "/system/bin/cat", "/system/bin/chcon",
         "/system/bin/touch", "/system/bin/umount", "/system/bin/uptime",
         "/system/bin/vmstat", "/system/bin/watchprops",
         "/system/bin/wipe");
-ui_print("Primo passaggio eseguito!");
+ui_print("Spostamento librerie...");
 symlink("/system/lib/libvariablespeed.so", "/system/priv-app/GoogleDialer/lib/arm/libvariablespeed.so");
 symlink("/system/lib/libgoogle_recognizer_jni_l.so", "/system/priv-app/Velvet/lib/arm/libgoogle_recognizer_jni_l.so");
 symlink("/system/lib/libvcdecoder_jni.so", "/system/priv-app/Velvet/lib/arm/libvcdecoder_jni.so");
