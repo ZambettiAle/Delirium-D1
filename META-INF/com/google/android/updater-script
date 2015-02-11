@@ -3,6 +3,7 @@ ui_print("************ATTENZIONE************");
 ui_print("L'installazione potrebbe richiedere fino a 20min");
 ui_print("Non spegnere fino al completamento!!");
 ui_print("**********************************");
+set_progress(0.000000);
 run_program("/sbin/sh", "-c", "grep -q '/system' /etc/mtab || mount /system");
 run_program("/sbin/sh", "-c", "chattr -R -i /system/*");
 run_program("/sbin/sh", "-c", "rm -rf /system/*");

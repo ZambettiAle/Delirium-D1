@@ -1,9 +1,9 @@
 Delirium-D1
 ===========
 
-##Come posso ricostruire la rom partendo da questi files?
+##Come ricostruire la rom partendo da questi files?
 
-  - Scarica la Kitchen per il tuo SO [Kitchen Linux] <---> [Kitchen Windows]
+  - Scarica la Kitchen [Kitchen Linux] <---> [Kitchen Windows]
   - Clona il repository o scaricalo in formato ZIP
   - Inserire i files appena scaricati nella cartella WORKING della Kitchen
   - Rimuovere il file README
