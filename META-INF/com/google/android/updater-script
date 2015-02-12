@@ -1,14 +1,15 @@
 ui_print("LRX22C Based ROM by Delirium Team");
 ui_print("************ATTENZIONE************");
-ui_print("L'installazione potrebbe richiedere fino a 20min");
 ui_print("Non spegnere fino al completamento!!");
 ui_print("**********************************");
 set_progress(0.000000);
 run_program("/sbin/sh", "-c", "grep -q '/system' /etc/mtab || mount /system");
 run_program("/sbin/sh", "-c", "chattr -R -i /system/*");
 run_program("/sbin/sh", "-c", "rm -rf /system/*");
+set_progress(0.100000);
 ui_print("Estrazione sistema...");
 package_extract_dir("system", "/system");
+set_progress(0.300000);
 symlink("Roboto-Bold.ttf", "/system/fonts/DroidSans-Bold.ttf");
 symlink("Roboto-Regular.ttf", "/system/fonts/DroidSans.ttf");
 symlink("app_process32", "/system/bin/app_process");
@@ -40,6 +41,7 @@ symlink("toolbox", "/system/bin/cat", "/system/bin/chcon",
         "/system/bin/touch", "/system/bin/umount", "/system/bin/uptime",
         "/system/bin/vmstat", "/system/bin/watchprops",
         "/system/bin/wipe");
+set_progress(0.100000);
 ui_print("Spostamento librerie...");
 symlink("/system/lib/libvariablespeed.so", "/system/priv-app/GoogleDialer/lib/arm/libvariablespeed.so");
 symlink("/system/lib/libgoogle_recognizer_jni_l.so", "/system/priv-app/Velvet/lib/arm/libgoogle_recognizer_jni_l.so");
@@ -58,6 +60,7 @@ symlink("/system/lib/libjpeg.so", "/system/app/GalleryGoogle/lib/arm/libjpeg.so"
 symlink("/system/lib/libfacelock_jni.so", "/system/app/FaceLock/lib/arm/libfacelock_jni.so");
 symlink("/system/lib/libbluetooth_jni.so", "/system/app/Bluetooth/lib/arm/libbluetooth_jni.so");
 symlink("/system/lib/libjni_pacprocessor.so", "/system/app/PacProcessor/lib/arm/libjni_pacprocessor.so");
+set_progress(0.100000);
 ui_print("Applicazione permessi...");
 ui_print("In caso di errore dopo questo passaggio, fare wipe system e ritentare!");
 set_metadata_recursive("/system", "uid", 0, "gid", 0, "dmode", 0755, "fmode", 0644, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
@@ -71,6 +74,7 @@ set_metadata("/system/bin/debuggerd", "uid", 0, "gid", 2000, "mode", 0755, "capa
 set_metadata("/system/bin/dex2oat", "uid", 0, "gid", 2000, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:dex2oat_exec:s0");
 set_metadata("/system/bin/dhcpcd", "uid", 0, "gid", 2000, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:dhcp_exec:s0");
 set_metadata("/system/bin/dnsmasq", "uid", 0, "gid", 2000, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:dnsmasq_exec:s0");
+set_progress(0.100000);
 set_metadata("/system/bin/drmserver", "uid", 0, "gid", 2000, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:drmserver_exec:s0");
 set_metadata("/system/bin/dumpstate", "uid", 0, "gid", 2000, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:dumpstate_exec:s0");
 set_metadata("/system/bin/hostapd", "uid", 0, "gid", 2000, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:hostapd_exec:s0");
@@ -86,6 +90,7 @@ set_metadata("/system/bin/mtpd", "uid", 0, "gid", 2000, "mode", 0755, "capabilit
 set_metadata("/system/bin/netcfg", "uid", 0, "gid", 3003, "mode", 02750, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
 set_metadata("/system/bin/netd", "uid", 0, "gid", 2000, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:netd_exec:s0");
 set_metadata("/system/bin/netmgrd", "uid", 0, "gid", 2000, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:netmgrd_exec:s0");
+set_progress(0.100000);
 ui_print("Ci siamo quasi!");
 set_metadata("/system/bin/patchoat", "uid", 0, "gid", 2000, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:dex2oat_exec:s0");
 set_metadata("/system/bin/ping", "uid", 0, "gid", 0, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
@@ -122,8 +127,10 @@ set_metadata_recursive("/system/vendor/lib/hw", "uid", 0, "gid", 2000, "dmode", 
 set_metadata("/system/vendor/lib/hw/sensors.msm8974.so", "uid", 0, "gid", 0, "mode", 0644, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
 set_metadata_recursive("/system/xbin", "uid", 0, "gid", 2000, "dmode", 0755, "fmode", 0755, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
 set_metadata("/system/xbin/su", "uid", 0, "gid", 2000, "mode", 04750, "capabilities", 0x0, "selabel", "u:object_r:su_exec:s0");
+set_progress(0.100000);
 ui_print("Installazione kernel e pulizia...");
 package_extract_file("boot.img", "/dev/block/platform/msm_sdcc.1/by-name/boot");
+set_progress(0.100000);
 delete_recursive("/data/dalvik-cache/");
 delete_recursive("/cache/dalvik-cache/");
 delete_recursive("/cache");
