@@ -1,7 +1,10 @@
 Delirium-D1
 ===========
+## Come ottenere l'ultima build:
+  - Scaricare la release più recente
+  - Ricostruire la rom con i files qui contenuti
 
-##Come ricostruire la rom partendo da questi files?
+##Come ricostruire la rom partendo dai files: 
 
   - Scarica la Kitchen [Kitchen Linux] <---> [Kitchen Windows]
   - Clona il repository o scaricalo in formato ZIP
@@ -13,16 +16,18 @@ Delirium-D1
 
 ##Come installare?
 Spostare il file con estensione .zip appena generato dalla cartella OUTPUT al dispositivo e installare da recovery.
-Installare i files
-L'installazione potrebbe richiedere molto tempo se è la prima volta, in tal caso non interrompere il processo per non perdere i dati.
+
+<b>L'installazione potrebbe richiedere molto tempo se è la prima volta, in tal caso non interrompere il processo per non perdere i dati.
 
 ##Come eseguire un'upgrade?
 Se hai già installato la rom e vuoi aggiornarla, installa lo zip aggiornato da recovery senza eseguire wipes.
 
+Gli wipes necessari verranno eseguiti automaticamente, in nessun caso avverrà una perdita di dati.
+
 <b>L'installazione potrebbe ritornare un errore di installazione. 
 <b>Procedere con un wipe system (NON eseguire altri wipes!) e ripetere l'installazione.
 
-##Perchè non si opera sui sorgenti?
+##Perchè non si opera su un fork Android??
 Lavorare con i sorgenti su GitHub è preferibile ma richiede molte risorse, spazio e tempo.
 La rom è stata compilata originariamente dai sorgenti Google utilizzando Linaro toolchain.
 Se dovessero essere necessarie operazioni sui sorgenti, la rom generata verrà automaticamente caricata.
