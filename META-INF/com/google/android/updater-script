@@ -1,15 +1,19 @@
-ui_print("*****************************************");
-ui_print("*****************************************");
-ui_print("*****************************************");
-ui_print("*****************************************");
-ui_print("*****************************************");
-ui_print("    LRX22C Based ROM by Delirium Team    ");
-ui_print("*****************************************");
-ui_print("*****************************************");
-ui_print("*****************************************");
-ui_print("****************ATTENZIONE***************");
-ui_print("   NON SPEGNERE FINO AL COMPLETAMENTO!!! ");
-ui_print("*****************************************");
+assert(getprop("ro.product.device") == "hammerhead" || getprop("ro.product.name") == "hammerhead" || 
+       getprop("ro.product.model") == "Nexus 5" || getprop("ro.product.board") == "hammerhead" || 
+       getprop("ro.build.product") == "hammerhead");
+ui_print("**********************************************");
+ui_print("*********************    *********************");
+ui_print("******************          ******************");
+ui_print("************                      ************");
+ui_print("*********                               ******");
+ui_print("**    LRX22C Based ROM by Delirium Team     **");
+ui_print("*****                                    *****");
+ui_print("*********                            *********");
+ui_print("**********************************************");
+ui_print("*******           ATTENZIONE           *******");
+ui_print("*    NON SPEGNERE FINO AL COMPLETAMENTO!!!   *");
+ui_print("********************      ********************");
+ui_print("**********************************************");
 set_progress(0.000000);
 run_program("/sbin/sh", "-c", "grep -q '/system' /etc/mtab || mount /system");
 run_program("/sbin/sh", "-c", "chattr -R -i /system/*");
