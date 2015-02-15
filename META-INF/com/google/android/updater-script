@@ -25,6 +25,7 @@ set_progress(0.100000);
 ui_print("Estrazione sistema...");
 package_extract_dir("system", "/system");
 set_progress(0.300000);
+ui_print("Symlink...");
 symlink("Roboto-Bold.ttf", "/system/fonts/DroidSans-Bold.ttf");
 symlink("Roboto-Regular.ttf", "/system/fonts/DroidSans.ttf");
 symlink("app_process32", "/system/bin/app_process");
@@ -57,7 +58,6 @@ symlink("toolbox", "/system/bin/cat", "/system/bin/chcon",
         "/system/bin/vmstat", "/system/bin/watchprops",
         "/system/bin/wipe");
 set_progress(0.400000);
-ui_print("Spostamento librerie...");
 symlink("/system/lib/libvariablespeed.so", "/system/priv-app/GoogleDialer/lib/arm/libvariablespeed.so");
 symlink("/system/lib/libgoogle_recognizer_jni_l.so", "/system/priv-app/Velvet/lib/arm/libgoogle_recognizer_jni_l.so");
 symlink("/system/lib/libvcdecoder_jni.so", "/system/priv-app/Velvet/lib/arm/libvcdecoder_jni.so");
