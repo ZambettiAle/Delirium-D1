@@ -1,5 +1,6 @@
 ui_print("*****************************************");
 ui_print("    LRX22C Based ROM by Delirium Team    ");
+ui_print("*****************************************");
 ui_print("****************ATTENZIONE***************");
 ui_print("   NON SPEGNERE FINO AL COMPLETAMENTO!!! ");
 ui_print("*****************************************");
@@ -43,6 +44,7 @@ symlink("toolbox", "/system/bin/cat", "/system/bin/chcon",
         "/system/bin/vmstat", "/system/bin/watchprops",
         "/system/bin/wipe");
 set_progress(0.400000);
+ui_print("Spostamento librerie...");
 symlink("/system/lib/libvariablespeed.so", "/system/priv-app/GoogleDialer/lib/arm/libvariablespeed.so");
 symlink("/system/lib/libgoogle_recognizer_jni_l.so", "/system/priv-app/Velvet/lib/arm/libgoogle_recognizer_jni_l.so");
 symlink("/system/lib/libvcdecoder_jni.so", "/system/priv-app/Velvet/lib/arm/libvcdecoder_jni.so");
@@ -62,6 +64,7 @@ symlink("/system/lib/libbluetooth_jni.so", "/system/app/Bluetooth/lib/arm/libblu
 symlink("/system/lib/libjni_pacprocessor.so", "/system/app/PacProcessor/lib/arm/libjni_pacprocessor.so");
 set_progress(0.500000);
 ui_print("Applicazione permessi...");
+ui_print("In caso di errore dopo questo passaggio, fare wipe system e ritentare!");
 set_metadata_recursive("/system", "uid", 0, "gid", 0, "dmode", 0755, "fmode", 0644, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
 set_metadata_recursive("/system/bin", "uid", 0, "gid", 2000, "dmode", 0755, "fmode", 0755, "capabilities", 0x0, "selabel", "u:object_r:system_file:s0");
 set_metadata("/system/bin/app_process32", "uid", 0, "gid", 2000, "mode", 0755, "capabilities", 0x0, "selabel", "u:object_r:zygote_exec:s0");
