@@ -1,11 +1,11 @@
-ro.build.id=LRX22C
+ro.build.id=LMY47D
 ro.build.display.id=LRX22C Delirium D1 v3
 ro.build.version.incremental=3
-ro.build.version.sdk=21
+ro.build.version.sdk=22
 ro.build.version.codename=REL
 ro.build.version.all_codenames=REL
-ro.build.version.release=5.0.1
-ro.build.date=Fri Nov 21 00:07:51 UTC 2014
+ro.build.version.release=5.1
+ro.build.date=Mon Mar 23 18:47:33 UTC 2014
 ro.build.date.utc=1416528471
 ro.build.type=user
 ro.build.user=android-build
@@ -28,8 +28,8 @@ ro.wifi.channels=
 ro.board.platform=msm8974
 ro.build.product=hammerhead
 # Do not try to parse description, fingerprint, or thumbprint
-ro.build.description=hammerhead-user 5.0.1 LRX22C 1602158 release-keys
-ro.build.fingerprint=google/hammerhead/hammerhead:5.0.1/LRX22C/1602158:user/release-keys
+ro.build.description=hammerhead-user 5.1 LMY47D 1602158 release-keys
+ro.build.fingerprint=google/hammerhead/hammerhead:5.1/LMY47D/1602158:user/release-keys
 ro.build.characteristics=nosdcard
 
 ro.config.ringtone=Titania.ogg
